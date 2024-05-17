@@ -1,8 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
     return (
-        <nav>
+        <nav className='nav-container'>
             <LinkList/>
         </nav>
     );
@@ -10,10 +11,10 @@ export default function NavBar() {
 
 function LinkList() {
     return (
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/signup">Sign-Up</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>  
+        <ul className='nav-list'>
+            <li className='nav-list-item'><NavLink to='/'>Home</NavLink></li>
+            <li className='nav-list-item'><NavLink to='/signup'>Sign-Up</NavLink></li>
+            <li className='nav-list-item'><NavLink to='/login'>Login</NavLink></li>
+        </ul>
     );
 }
